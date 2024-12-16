@@ -19,5 +19,7 @@ jobs:
         run: cd webapp
       - name: install dependencies
         run: yarn install
+        working-directory: webapp
       - name: lint
         run: yarn lint
+        working-directory: webapp
