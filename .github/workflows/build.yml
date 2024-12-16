@@ -17,5 +17,4 @@ jobs:
       - name: Setup NodeJS with cache
         uses: dreamcodez/dead-simple-nodejs@1
         with:
-          NODE_VERSION: 16.1.0
-          NODE_DISTRO: linux-x64 # optional
+          NODE_VERSION: 20.1.0
