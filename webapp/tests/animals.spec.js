@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { expect } from 'chai';
+import {expect} from 'chai';
 
 const URL = `${process.env.API_URL || 'http://localhost:3000'}/animals`;
 
@@ -35,4 +35,4 @@ describe('Animals', () => {
       error: 'Animal not found',
     });
   });
-})
+});
