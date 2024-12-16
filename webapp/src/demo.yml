@@ -1,0 +1,46 @@
+services:
+
+  webapp:
+    image: webapp
+    restart: always
+    ports:
+      - "3000:3000"
+    container_name: webapp
+    volumes:
+      - ./database:/app/database
+    environment:
+      - MYSQL_URL=http://webapp:password@mysql:3306/animals
+    depends_on:
+      database:
+        condition: service_started
+
+
+  database:
+    image: mysql
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_USER=webapp
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=animals
+    volumes:
+      - webapp:/var/lib/mysql
+
+  test:
+    build:
+      context: .
+    command: yarn test
+    environment:
+      - API_URL=http://webapp:3000
+    depends_on:
+      webapp:
+        condition: service_started
+      database:
+        condition: service_started
+
+
+
+volumes:
+  webapp:
+
+
