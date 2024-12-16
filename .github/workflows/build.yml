@@ -14,9 +14,7 @@ jobs:
       - name: Setup NodeJS with cache
         uses: dreamcodez/dead-simple-nodejs@1
         with:
-          NODE_VERSION: 20.1.0
-      - name: List files in the repository
-        run: cd webapp
+          NODE_VERSION: 20.9.0
       - name: install dependencies
         run: yarn install
         working-directory: webapp
