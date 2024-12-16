@@ -20,3 +20,5 @@ jobs:
           NODE_VERSION: 20.1.0
       - name: install dependencies
         run: yarn install
+      - name: lint
+        run: yarn lint
