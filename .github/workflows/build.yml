@@ -32,4 +32,4 @@ jobs:
           context: .
           file: webapp/Dockerfile
           push: false
-          tags: ${{ secrets.DOCKER_USERNAME }}/webapp:latest
+          tags: $tomasboonehogent/webapp:latest
