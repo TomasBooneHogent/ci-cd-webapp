@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       - run: echo "This job's status is ${{ job.status }}."
       - name: Setup NodeJS with cache
         uses: dreamcodez/dead-simple-nodejs@1
