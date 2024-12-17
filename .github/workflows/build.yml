@@ -31,5 +31,5 @@ jobs:
         with:
           context: .
           file: webapp/Dockerfile
-          push: false
+          push: true
           tags: tomasboonehogent/webapp:latest
