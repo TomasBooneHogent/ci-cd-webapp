@@ -32,4 +32,4 @@ jobs:
           context: .
           file: webapp/Dockerfile
           push: false
-          tags: $tomasboonehogent/webapp:latest
+          tags: tomasboonehogent/webapp:latest
